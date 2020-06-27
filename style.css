@@ -1,0 +1,181 @@
+:root{
+    --Pale_Blue: hsl(243, 100%, 93%);
+    --Grayish_Blue: hsl(229, 7%, 55%);
+    --Dark_Blue: hsl(228, 56%, 26%);
+    --Very_Dark_Blue: hsl(229, 57%, 11%);
+}
+*{
+    font-family: 'Raleway';
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+    font-size: 14px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-size: initial;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-image: url('./images/bg-desktop.png');
+    background-color: var(--Very_Dark_Blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 100%;
+    padding: 0 1.7rem;
+}
+.box1,.box2{
+    background-color: var(--Dark_Blue);
+}
+.box1{
+    padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+    border-radius: 0.5rem 6rem 0.5rem 0.5rem;
+}
+.logo{
+    margin-bottom: 1.7rem;
+}
+.icons{
+    width: 63%;
+    display: flex;
+    justify-content: space-between;
+}
+.icon-item{
+    padding: 0.7rem 0.75rem;
+    background-color: var(--Very_Dark_Blue);
+    border-radius: 0.65rem;
+}
+.icon-item>img{
+    height: 20px;
+}
+.box2{
+    margin-top: 1.5rem;
+    color: var(--Grayish_Blue);
+    font-weight: 400;
+    padding: 2.5rem 2.5rem 3.5rem 2.5rem;
+    border-radius: 0.5rem;
+}
+.b-title{
+    text-align: center;
+}
+.b-title>span{
+    color: var(--Pale_Blue);
+    font-weight: 700;
+}
+.progress-bar{
+    margin-top: 1.5rem;
+    border: 3px solid var(--Very_Dark_Blue);
+    background: var(--Very_Dark_Blue);
+    border-radius: 25rem;
+}
+.progress-size{
+    border-radius: 25rem;
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    height: 1rem;
+    width: 81.5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.circle{
+    margin-right: 0.1rem;
+    background-color: white;
+    width: 0.7rem;
+    height: 0.65rem;
+    border-radius: 50%;
+    box-shadow: 0px 0px 30px -1px rgba(255,255,255,1);
+}
+.size-gb{
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    color: white;
+}
+.b-restante{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 12rem;
+    padding: 0.8rem 0.4rem;
+}
+.b-restante>span:nth-child(odd){
+    color: var(--Very_Dark_Blue);
+    font-size: 3rem;
+    margin-right: 0.7rem;
+    font-weight: 700;
+}
+.b-restante>span:nth-child(even){
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 800px) {
+    body{
+        background-image: url('./images/bg-mobile.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .b-restante{
+        position: absolute;
+        left: 5rem;
+        bottom: -2.5rem;
+        margin-top: 1.5rem;
+        border-radius: 0.8rem;
+    }
+}
+@media only screen and (min-width: 800px) {
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 0;
+        margin-bottom: 11rem;
+    }
+    .box1,.box2{
+        display: inline-block;
+        margin: 0.8rem;
+    }
+    .box1{
+        width: 15%;
+    }
+    .box2{
+        width: 40%;
+        padding: 2.5rem;
+        height: 5rem; 
+    }
+    .b-title{
+        text-align: left;
+        margin-top: 1.5rem;
+    }
+    .progress-bar{
+        margin: 0.8rem 0;
+    }
+    .icons{
+        width: 75%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .b-restante{
+        margin-top: -6.5rem !important;
+        margin-left: 28rem;
+        position: relative;
+        border-radius: 0.8rem 0.8rem 0 0.8rem;
+    }
+    .b-restante::before{
+        position: absolute;
+        content: "";
+        top: 100%;
+        right: 0%;
+        border-top: 8px solid #ffffff;
+        border-right: 8px solid #ffffff;
+        border-bottom: 8px solid transparent;
+        border-left: 8px solid transparent;
+
+    }
+}
+.attribution { font-size: 11px; text-align: center; width: 100%; }
+.attribution a { color: hsl(228, 45%, 44%); }
